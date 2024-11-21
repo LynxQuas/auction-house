@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
-import InputError from "../components/InputError";
+import Input from "../components/Input";
 
 type LoginInputType = {
     username: string;
@@ -25,39 +25,33 @@ const LoginPage = () => {
             className="flex flex-col gap-6 translate-x-[-50%] translate-y-[-50%] absolute top-[50%] left-[50%]  w-[25rem] ml-20"
         >
             <h2 className="text-2xl font-bold">Login</h2>
-            <div>
-                {errors.username && (
-                    <InputError message={errors.username.message!} />
-                )}
 
-                <input
-                    placeholder="Username"
-                    type="text"
-                    className="border-2 w-full py-4 px-4"
-                    {...register("username", {
-                        required: "Username is required.",
-                    })}
-                />
-            </div>
+            <Input
+                placeholder="Username"
+                type="text"
+                name="username"
+                message={errors.username && errors.username.message}
+                className="border-2 w-full py-4 px-4"
+                register={register}
+                registerOpts={{ required: "Username is required" }}
+            />
 
-            <div>
-                {errors.password && (
-                    <InputError message={errors.password.message!} />
-                )}
-                <input
-                    type="password"
-                    placeholder="Password"
-                    className="border-2 w-full py-4 px-4"
-                    {...register("password", {
-                        required: "Password is required.",
-                        minLength: {
-                            value: 6,
-                            message:
-                                "Password should be at least 6 character long.",
-                        },
-                    })}
-                />
-            </div>
+            <Input
+                type="password"
+                name="password"
+                message={errors.password && errors.password.message!}
+                placeholder="Password"
+                className="border-2 w-full py-4 px-4"
+                register={register}
+                registerOpts={{
+                    required: "Password is required.",
+                    minLength: {
+                        value: 6,
+                        message:
+                            "Password should be at least 6 character long.",
+                    },
+                }}
+            />
             <div className="flex justify-between mx-4 items-center">
                 <button
                     type="submit"
