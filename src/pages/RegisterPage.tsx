@@ -23,7 +23,7 @@ const RegisterPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ml-20 w-[25rem]"
+            className="flex flex-col gap-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:ml-20 sm:w-[25rem] w-full p-5"
         >
             <h2 className="text-2xl font-bold">Create an Account</h2>
             <Input
@@ -83,8 +83,8 @@ const RegisterPage = () => {
                 }}
             />
 
-            <div className="flex justify-between items-center mx-4">
-                <button className="font-semibold bg-black text-white py-3 px-4 rounded-md hover:bg-black/75">
+            <div className="flex justify-between items-center">
+                <button className="font-semibold bg-black text-white py-3 px-6 rounded-md hover:bg-black/75">
                     Register
                 </button>
                 <Link className="hover:text-blue-500 font-semibold" to="/login">

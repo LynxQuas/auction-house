@@ -10,13 +10,22 @@ const navMenu = [
 
 const Navbar = () => {
     return (
-        <nav className="flex flex-col justify-between min-h-screen bg-gray-400 p-8">
+        <nav className="hidden md:flex flex-col justify-between min-h-screen bg-black p-8 text-white">
             {/* Main Navigation  */}
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-6">
                 <h1 className="mb-4 text-2xl font-bold">Auction House</h1>
                 {navMenu.map((menu) => (
                     <li key={menu.url}>
-                        <NavLink to={menu.url}>{menu.label}</NavLink>
+                        <NavLink
+                            to={menu.url}
+                            className={({ isActive }) => {
+                                return `hover:bg-gray-800 py-2 px-4 cursor-pointer block ${
+                                    isActive ? "bg-gray-800" : ""
+                                }`;
+                            }}
+                        >
+                            {menu.label}
+                        </NavLink>
                     </li>
                 ))}
             </ul>

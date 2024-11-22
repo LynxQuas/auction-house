@@ -22,7 +22,7 @@ const LoginPage = () => {
     return (
         <form
             onSubmit={handleSubmit(submitHandler)}
-            className="flex flex-col gap-6 translate-x-[-50%] translate-y-[-50%] absolute top-[50%] left-[50%]  w-[25rem] ml-20"
+            className="flex flex-col gap-6 translate-x-[-50%] translate-y-[-50%] absolute top-[50%] left-[50%]  sm:w-[25rem] w-full p-5 md:ml-20"
         >
             <h2 className="text-2xl font-bold">Login</h2>
 
@@ -52,7 +52,8 @@ const LoginPage = () => {
                     },
                 }}
             />
-            <div className="flex justify-between mx-4 items-center">
+
+            <div className="flex justify-between items-center">
                 <button
                     type="submit"
                     className="bg-black text-white py-3 px-10 font-semibold rounded-md hover:bg-black/75"
