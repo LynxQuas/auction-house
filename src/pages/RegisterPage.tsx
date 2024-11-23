@@ -23,7 +23,7 @@ const RegisterPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:ml-20 sm:w-[25rem] w-full p-5"
+            className="flex flex-col gap-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:ml-20 sm:w-[25rem] w-full p-5"
         >
             <h2 className="text-2xl font-bold">Create an Account</h2>
             <Input
@@ -31,7 +31,6 @@ const RegisterPage = () => {
                 name="username"
                 message={errors.username && errors.username.message}
                 placeholder="Username"
-                className="p-4 border-2 w-full"
                 register={register}
                 registerOpts={{ required: "Username is required" }}
             />
@@ -41,7 +40,6 @@ const RegisterPage = () => {
                 name="email"
                 message={errors.email && errors.email.message}
                 placeholder="Email"
-                className="p-4 border-2 w-full"
                 register={register}
                 registerOpts={{
                     required: "Email is required.",
@@ -57,7 +55,6 @@ const RegisterPage = () => {
                 name="password"
                 message={errors.password && errors.password.message}
                 placeholder="Password"
-                className="p-4 border-2 w-full"
                 register={register}
                 registerOpts={{
                     required: "Password is required",
@@ -73,13 +70,11 @@ const RegisterPage = () => {
                 name="confirmation"
                 message={errors.confirmation && errors.confirmation.message}
                 placeholder="Confirm Password"
-                className="p-4 border-2 w-full"
                 register={register}
                 registerOpts={{
                     required: "Confirm your password",
                     validate: (value) =>
-                        value === getValues().password ||
-                        "Password do not match",
+                        value === getValues().password || "Password do not match",
                 }}
             />
 

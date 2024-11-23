@@ -22,33 +22,28 @@ const LoginPage = () => {
     return (
         <form
             onSubmit={handleSubmit(submitHandler)}
-            className="flex flex-col gap-6 translate-x-[-50%] translate-y-[-50%] absolute top-[50%] left-[50%]  sm:w-[25rem] w-full p-5 md:ml-20"
+            className="flex flex-col gap-5  translate-x-[-50%] translate-y-[-50%] absolute top-[50%] left-[50%]  sm:w-[25rem] w-full p-5 md:ml-20"
         >
             <h2 className="text-2xl font-bold">Login</h2>
-
             <Input
                 placeholder="Username"
                 type="text"
                 name="username"
-                message={errors.username && errors.username.message}
-                className="border-2 w-full py-4 px-4"
                 register={register}
                 registerOpts={{ required: "Username is required" }}
+                message={errors.username && errors.username.message}
             />
-
             <Input
                 type="password"
                 name="password"
-                message={errors.password && errors.password.message!}
                 placeholder="Password"
-                className="border-2 w-full py-4 px-4"
                 register={register}
+                message={errors.password && errors.password.message}
                 registerOpts={{
                     required: "Password is required.",
                     minLength: {
                         value: 6,
-                        message:
-                            "Password should be at least 6 character long.",
+                        message: "Password should be at least 6 character long.",
                     },
                 }}
             />

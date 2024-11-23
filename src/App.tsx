@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import CreatingListings from "./create-listings/CreatingListings";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -17,7 +18,7 @@ const App = () => {
                 { path: "/wishlist", element: <h1>WishList Page</h1> },
                 {
                     path: "/create-listings",
-                    element: <h1>Create new Listing Page</h1>,
+                    element: <CreatingListings />,
                 },
                 { path: "/profile", element: <h1>Profile Page</h1> },
                 { path: "/login", element: <LoginPage /> },

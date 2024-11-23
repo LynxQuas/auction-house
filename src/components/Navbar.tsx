@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { CiLogin } from "react-icons/ci";
 
 const navMenu = [
     { url: "/", label: "Home" },
@@ -34,10 +36,19 @@ const Navbar = () => {
             <div>
                 <ul className="flex flex-col gap-4">
                     <li>
-                        <Link to="/profile">Profile</Link>
+                        <Link to="/profile">
+                            <FaRegCircleUser
+                                className="text-white inline mx-2"
+                                size={25}
+                            />
+                            Profile
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">
+                            <CiLogin className="text-white inline mx-2" size={25} />
+                            Login
+                        </Link>
                     </li>
                 </ul>
             </div>
