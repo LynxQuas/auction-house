@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navigations from "../components/Navigations";
 
 const Root = () => {
     return (
-        <div className="flex  gap-10">
+        <div className="flex gap-10">
             <header>
-                <Navbar />
+                <Navigations />
             </header>
-            <main className="p-8 w-[80%]">
+            <main className="p-8 flex-grow ">
                 <Outlet />
             </main>
         </div>

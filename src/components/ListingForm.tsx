@@ -22,8 +22,11 @@ const ListingForm = () => {
     };
 
     return (
-        <div className="absolute w-full p-4 md:w-[30rem] md:ml-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+        <div className="absolute w-full p-4 md:w-[30rem] md:ml-32 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <form
+                className="flex flex-col gap-4"
+                onSubmit={handleSubmit(onSubmit)}
+            >
                 <Input
                     type="text"
                     name="title"
@@ -32,6 +35,7 @@ const ListingForm = () => {
                     registerOpts={{ required: "Title is required" }}
                     message={errors.title && errors.title.message}
                 />
+
                 <div className="w-full flex flex-col">
                     {errors.description && (
                         <InputError message={errors.description.message!} />
