@@ -3,7 +3,7 @@ import Navigations from "../components/Navigations";
 
 const Root = () => {
     return (
-        <div className="flex gap-10">
+        <div className="flex md:flex-row flex-col gap-10">
             <header>
                 <Navigations />
             </header>

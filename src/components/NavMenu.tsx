@@ -2,6 +2,7 @@ import { CiLogin } from "react-icons/ci";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import { navMenu } from "../constants";
+import { IoMdNotifications } from "react-icons/io";
 
 const NavMenu = ({ onClose }: { onClose?: () => void }) => {
     return (
@@ -35,6 +36,18 @@ const NavMenu = ({ onClose }: { onClose?: () => void }) => {
                             size={25}
                         />
                         Profile
+                    </Link>
+                </li>
+                <li className="hidden md:block">
+                    <Link to="/notifications" className="relative">
+                        <IoMdNotifications
+                            className="text-white inline mx-2"
+                            size={25}
+                        />
+                        Notifications
+                        <div className="absolute top-[-5px] left-[-3px] bg-red-500 w-5 h-5 flex justify-center items-center rounded-full">
+                            <span className="text-white text-xs">1</span>
+                        </div>
                     </Link>
                 </li>
                 <li onClick={onClose}>
