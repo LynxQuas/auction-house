@@ -1,9 +1,11 @@
 import { useState } from "react";
-import NavigationLayout from "./NavigationLayout";
-import NavMenu from "./NavMenu";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { IoMdNotifications } from "react-icons/io";
+
+import NavMenu from "./NavMenu";
+import NavigationLayout from "./NavigationLayout";
 
 const Navigations = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -15,7 +17,7 @@ const Navigations = () => {
                 <NavMenu />
             </NavigationLayout>
 
-            {/* Mobile Humberger Menu  */}
+            {/* Mobile Navigation  */}
             <div className="md:hidden justify-between w-screen  bg-black sticky top-0 right-0 flex p-4 items-center">
                 <GiHamburgerMenu
                     size={30}
@@ -30,7 +32,7 @@ const Navigations = () => {
                 </div>
             </div>
 
-            {/* Mobile Navigation  */}
+            {/* Mobile Navigation Menu  */}
             {isMobileNavOpen && (
                 <NavigationLayout className="z-50 block md:hidden absolute top-0 left-0 w-screen h-screen">
                     <IoMdCloseCircleOutline

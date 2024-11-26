@@ -21,6 +21,10 @@ const App = () => {
                     element: <CreatingListings />,
                 },
                 { path: "/profile", element: <h1>Profile Page</h1> },
+                {
+                    path: "/notifications",
+                    element: <h1>Notifications Page</h1>,
+                },
                 { path: "/login", element: <LoginPage /> },
                 { path: "/register", element: <RegisterPage /> },
             ],

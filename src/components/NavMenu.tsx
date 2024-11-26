@@ -1,8 +1,10 @@
-import { CiLogin } from "react-icons/ci";
-import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
-import { navMenu } from "../constants";
+
+import { FaRegCircleUser } from "react-icons/fa6";
+import { CiLogin } from "react-icons/ci";
 import { IoMdNotifications } from "react-icons/io";
+
+import { navMenu } from "../constants";
 
 const NavMenu = ({ onClose }: { onClose?: () => void }) => {
     return (
