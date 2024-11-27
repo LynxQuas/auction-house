@@ -11,14 +11,14 @@ const Navigations = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
     return (
-        <nav>
+        <>
             {/* Desktop Navigation  */}
-            <NavigationLayout className="z-50 md:block hidden sticky top-0 right-0 h-screen w-[18rem]">
+            <NavigationLayout className="z-50  md:block hidden fixed left-0 bottom-0 top-0 min-h-screen w-[18rem]">
                 <NavMenu />
             </NavigationLayout>
 
             {/* Mobile Navigation  */}
-            <div className="md:hidden justify-between w-screen  bg-black sticky top-0 right-0 flex p-4 items-center">
+            <nav className="md:hidden bg-black fixed top-0 w-screen text-white flex justify-between py-4 px-8 items-center">
                 <GiHamburgerMenu
                     size={30}
                     className="text-white"
@@ -30,11 +30,11 @@ const Navigations = () => {
                     </div>
                     <IoMdNotifications className="text-white" size={25} />
                 </div>
-            </div>
+            </nav>
 
             {/* Mobile Navigation Menu  */}
             {isMobileNavOpen && (
-                <NavigationLayout className="z-50 block md:hidden absolute top-0 left-0 w-screen h-screen">
+                <NavigationLayout className="z-50 block md:hidden fixed top-0 left-0 w-screen h-screen">
                     <IoMdCloseCircleOutline
                         className="text-white absolute w-10 h-10 top-0 right-0 m-5"
                         onClick={() => setIsMobileNavOpen(false)}
@@ -42,7 +42,7 @@ const Navigations = () => {
                     <NavMenu onClose={() => setIsMobileNavOpen(false)} />
                 </NavigationLayout>
             )}
-        </nav>
+        </>
     );
 };
 

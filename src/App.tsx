@@ -3,6 +3,7 @@ import Root from "./pages/Root";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import CreatingListings from "./features/create-listings/CreatingListings";
+import ActiveListingsPage from "./features/active-listings/ActiveListingsPage";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -12,7 +13,7 @@ const App = () => {
                 { path: "/", element: <h1>Home Page</h1> },
                 {
                     path: "/active-listings",
-                    element: <h1>Active Listings Page</h1>,
+                    element: <ActiveListingsPage />,
                 },
                 { path: "/categories", element: <h1>Categories Page</h1> },
                 { path: "/wishlist", element: <h1>WishList Page</h1> },
