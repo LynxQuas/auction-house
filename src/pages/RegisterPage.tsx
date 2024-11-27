@@ -23,7 +23,7 @@ const RegisterPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:ml-20 sm:w-[25rem] w-full p-5"
+            className="bg-white  rounded-xl shadow-lg py-10 md:px-10 flex flex-col gap-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:ml-20 sm:w-[25rem] w-full p-5"
         >
             <h2 className="text-2xl font-bold">Create an Account</h2>
             <Input
@@ -74,7 +74,8 @@ const RegisterPage = () => {
                 registerOpts={{
                     required: "Confirm your password",
                     validate: (value) =>
-                        value === getValues().password || "Password do not match",
+                        value === getValues().password ||
+                        "Password do not match",
                 }}
             />
 
