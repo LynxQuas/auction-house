@@ -1,7 +1,8 @@
 const ListingCard = () => {
     return (
-        <div className="flex my-1 flex-col w-1/2 md:w-[20rem] border-2 rounded-md bg-white gap-4 shadow-md">
+        <div className="flex my-1 flex-col w-1/2 md:w-[20rem] border-2 rounded-md bg-white gap-2 shadow-md">
             {/* image  */}
+            {/* high needs to change  */}
             <div className="w-full h-[10rem] bg-black rounded-md" />
 
             <div className="flex flex-col gap-4 p-4">

@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import Input from "./Input";
 import InputError from "./InputError";
+import React from "react";
 
 type ListingFormTypes = {
     title: string;
@@ -10,7 +11,11 @@ type ListingFormTypes = {
     endDate: Date;
 };
 
-const ListingForm = () => {
+type ListingFormProps = {
+    children: React.ReactNode;
+};
+
+const ListingForm = ({ children }: ListingFormProps) => {
     const {
         register,
         handleSubmit,
@@ -22,7 +27,8 @@ const ListingForm = () => {
     };
 
     return (
-        <div className="absolute w-full p-4 md:w-[30rem] md:ml-32 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <div className="bg-white absolute w-full p-6 rounded-xl shadow-lg md:w-[30rem] md:ml-32 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            {children}
             <form
                 className="flex flex-col gap-4"
                 onSubmit={handleSubmit(onSubmit)}
