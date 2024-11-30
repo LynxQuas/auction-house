@@ -9,6 +9,7 @@ type ListingFormTypes = {
     categories: string;
     price: number;
     endDate: Date;
+    image: string;
 };
 
 type ListingFormProps = {
@@ -40,6 +41,15 @@ const ListingForm = ({ children }: ListingFormProps) => {
                     register={register}
                     registerOpts={{ required: "Title is required" }}
                     message={errors.title && errors.title.message}
+                />
+
+                {/* Needs to fix  */}
+                <Input
+                    placeholder="image"
+                    type="file"
+                    name="image"
+                    register={register}
+                    registerOpts={{ required: "image is required" }}
                 />
 
                 <div className="w-full flex flex-col">
