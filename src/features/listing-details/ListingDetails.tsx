@@ -50,6 +50,7 @@ const ListingDetails = () => {
                 <button className="bg-black py-2 px-4 text-white rounded-md">
                     Add Bid
                 </button>
+
                 <button className="bg-green-500 py-2 px-4 text-white rounded-md">
                     Comment
                 </button>
