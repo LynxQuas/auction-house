@@ -6,9 +6,12 @@ const ListingDetails = () => {
 
     return (
         <div>
+            {/* Listing Title  */}
             <h3 className="text-3xl text-center pt-4 font-bold">
                 Lising title
             </h3>
+
+            {/* Listing Image and Content detail  */}
             <div className="flex flex-col lg:flex-row py-6 px-4 lg:px-10 gap-8">
                 {/* Listing Image */}
                 <div className="bg-black w-full lg:w-1/2 h-[20rem] rounded-lg"></div>
@@ -62,35 +65,6 @@ const ListingDetails = () => {
 
                     <div className="flex flex-col gap-2">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolorem corrupti a, eum repellat doloribus ea
-                            dolorum asperiores deleniti voluptatem. Aut modi
-                            quis reprehenderit veritatis qui, tempora magni in
-                            ipsam dolore. Tempora optio nulla, consequuntur
-                            saepe autem, voluptatem voluptatum repudiandae,
-                            aliquid blanditiis laborum nemo laboriosam suscipit
-                            et nostrum quis recusandae nobis. Non recusandae sit
-                            enim accusantium error fuga dignissimos iste earum.
-                            Doloribus, at praesentium harum voluptates ipsam,
-                            magnam dignissimos, quaerat quisquam minima dolores
-                            ullam illo. Blanditiis ipsam illum impedit excepturi
-                            repudiandae fugit consequuntur rem exercitationem
-                            eum nesciunt, molestias, non doloribus unde. Impedit
-                            autem porro, tempore et molestias at eligendi
-                            distinctio fuga tenetur rem possimus, placeat
-                            fugiat? Recusandae, cum excepturi natus autem
-                            laborum nisi ex ut ipsam, porro voluptas cupiditate
-                            enim sapiente. Iure quam voluptatum maxime,
-                            doloremque ullam odio laudantium harum unde
-                            mollitia, cumque veniam, nulla laboriosam ab in
-                            officiis laborum quasi? Harum tempora obcaecati
-                            distinctio minima possimus sunt ducimus sed libero.
-                            Deleniti earum ipsam alias laudantium ex maiores
-                            beatae officiis minima velit. Enim maiores ad iure,
-                            perspiciatis quibusdam sunt omnis eaque veniam
-                            praesentium magni nihil tempora, ratione sapiente
-                            corporis! Natus, fuga. Accusantium, reiciendis harum
-                            est explicabo iusto incidunt beatae laudantium
                             officia sapiente hic impedit dolore nobis quos
                             facere suscipit, asperiores voluptate vero,
                             blanditiis unde eum eius. Ratione repellat autem
@@ -114,6 +88,7 @@ const ListingDetails = () => {
                         </span>
                     </div>
                 </div>
+
                 <div className="flex flex-col gap-8 border-2 border-black p-4  rounded-lg">
                     <div className="flex items-center gap-4">
                         <div className="w-10 h-10 bg-black rounded-full" />
