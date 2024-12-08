@@ -44,7 +44,7 @@ const RegisterPage = () => {
                 registerOpts={{
                     required: "Email is required.",
                     pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, //Reg from stack overflow.
                         message: "Invalid email address",
                     },
                 }}
@@ -80,7 +80,10 @@ const RegisterPage = () => {
             />
 
             <div className="flex justify-between items-center">
-                <button className="font-semibold bg-black text-white py-3 px-6 rounded-md hover:bg-black/75">
+                <button
+                    type="submit"
+                    className="font-semibold bg-black text-white py-3 px-6 rounded-md hover:bg-black/75"
+                >
                     Register
                 </button>
                 <Link className="hover:text-blue-500 font-semibold" to="/login">

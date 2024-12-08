@@ -5,6 +5,7 @@ import RegisterPage from "./pages/RegisterPage";
 import CreatingListings from "./features/create-listings/CreatingListings";
 import ActiveListingsPage from "./features/active-listings/ActiveListingsPage";
 import ListingDetails from "./features/listing-details/ListingDetails";
+import WishlistPage from "./pages/WishlistPage";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const App = () => {
                 },
                 { path: "/active-listings/:id", element: <ListingDetails /> },
                 { path: "/categories", element: <h1>Categories Page</h1> },
-                { path: "/wishlist", element: <h1>WishList Page</h1> },
+                { path: "/wishlist", element: <WishlistPage /> },
                 {
                     path: "/create-listings",
                     element: <CreatingListings />,

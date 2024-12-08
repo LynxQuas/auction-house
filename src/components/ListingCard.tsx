@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const ListingCard = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="flex my-1 flex-col w-1/2 md:w-[20rem] border-2 rounded-md bg-white gap-2 shadow-md">
             {/* image  */}
@@ -22,10 +26,15 @@ const ListingCard = () => {
                         0:24:30
                     </span>
                 </div>
-
-                <button className="bg-black py-2 px-4 text-white rounded-md">
-                    View Details
-                </button>
+                <div className="flex gap-4 items-center">
+                    <div className="border-2 p-2">❤️</div>
+                    <button
+                        onClick={() => navigate("/active-listings/1")} // just for test need to fix.
+                        className="bg-black py-2 px-4 text-white rounded-md grow"
+                    >
+                        View Details
+                    </button>
+                </div>
             </div>
         </div>
     );
