@@ -18,7 +18,6 @@ const App = () => {
                     element: <ActiveListingsPage />,
                 },
                 { path: "/active-listings/:id", element: <ListingDetails /> },
-                { path: "/categories", element: <h1>Categories Page</h1> },
                 { path: "/wishlist", element: <WishlistPage /> },
                 {
                     path: "/create-listings",
