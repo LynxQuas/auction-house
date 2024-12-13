@@ -28,8 +28,6 @@ const NavMenu = ({ onClose }: { onClose?: () => void }) => {
                 ))}
             </ul>
 
-            {/* Side navigation  */}
-
             <ul className="flex flex-col gap-4">
                 <li onClick={onClose}>
                     <Link to="/profile">
