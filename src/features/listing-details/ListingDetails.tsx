@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import Modal from "../../components/Modal";
+import ModalLayout from "../../components/ModalLayout";
 import CommentModal from "../../components/modals/CommentModal";
 
 const ListingDetails = () => {
@@ -12,9 +12,9 @@ const ListingDetails = () => {
     return (
         <>
             {isModalOpen && (
-                <Modal onClose={() => setIsModalOpen(false)}>
+                <ModalLayout onClose={() => setIsModalOpen(false)}>
                     <CommentModal />
-                </Modal>
+                </ModalLayout>
             )}
             <div>
                 {/* Listing Title  */}

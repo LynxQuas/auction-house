@@ -5,7 +5,7 @@ type ModalProps = {
     onClose: () => void;
     children: React.ReactNode;
 };
-const Modal = ({ onClose, children }: ModalProps) => {
+const ModalLayout = ({ onClose, children }: ModalProps) => {
     return (
         <div
             onClick={onClose}
@@ -26,4 +26,4 @@ const Modal = ({ onClose, children }: ModalProps) => {
     );
 };
 
-export default Modal;
+export default ModalLayout;
