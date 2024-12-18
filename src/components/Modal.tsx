@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdClose } from "react-icons/io";
 
 type ModalProps = {
     onClose: () => void;
@@ -15,7 +16,10 @@ const Modal = ({ onClose, children }: ModalProps) => {
                 className="absolute top-[50%] left-[50%] translate-x-[-50%] md:translate-x-[-30%] translate-y-[-50%] w-[90%] h-[30rem] md:w-[30rem] md:h-[30rem] bg-white shadow-lg rounded-md"
             >
                 {/* Change this to icon  */}
-                <span className="absolute top-0 right-0 my-2 mx-5">X</span>
+                <IoMdClose
+                    onClick={onClose}
+                    className="absolute top-0 right-0 m-5 w-6 h-6 cursor-pointer"
+                />
                 {children}
             </div>
         </div>

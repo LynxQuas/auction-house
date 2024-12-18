@@ -29,8 +29,8 @@ const ListingCard = () => {
                     </span>
                 </div>
                 <div className="flex gap-4 items-center">
-                    <IoHeartOutline className="w-6 h-6 cursor-pointer hidden" />
-                    <FaHeart className="w-6 h-6 text-red-500 cursor-pointer hover:text-red-600" />
+                    <IoHeartOutline className="w-6 h-6 cursor-pointer" />
+                    <FaHeart className="w-6 h-6 text-red-500 cursor-pointer" />
                     <button
                         onClick={() => navigate("/active-listings/1")} // just for test need to fix.
                         className="bg-black py-2 px-4 text-white rounded-md grow"
